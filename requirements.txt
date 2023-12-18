@@ -16,3 +16,4 @@ seaborn==0.12.2
 six==1.16.0
 tzdata==2023.3
 xmltodict==0.13.0
+requests~=2.31.0

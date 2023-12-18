@@ -13,11 +13,6 @@ Key stats:
 - 132 removed colorectal polyps
 - 351264 bounding box annotations
 
-
-## Download
-The dataset has been uploaded to Figshare and archived at this DOI:  [10.25452/figshare.plus.22202866
-](https://doi.org/10.25452/figshare.plus.22202866)
-
 ## Data Format
 The dataset is composed by the following files:
 - 60 compressed folders named `{SSS}-{VVV}_frames` with the frames from each recording
@@ -77,6 +72,12 @@ The `lesion_info.csv` file reports the following data:
 - site: anatomical site where the removed lesion was found
 - histology_extended: lesion histology
 - histology_class: lesion histology assigned to one of the following classes: (adenoma, AD; hyperplastic polyp, HP; sessile serrated lesion, SSL, NO POLYP, traditional serrated adenoma, TSA; OTHER)
+
+## Dataset Download
+Run `figshare_dataset.py` to download the dataset to the `./dataset` folder. Output folder can be updated setting variable `DOWNLOAD_DIR` in `figshare_dataset.py`. Dataset files are roughly 1TB worth of information and, depending on your resources, can take up to multiple days to download, so please make proper preparations.
+
+The dataset has also been uploaded to Figshare and archived at this DOI:  [10.25452/figshare.plus.22202866
+](https://doi.org/10.25452/figshare.plus.22202866)
 
 ## Version
 v1.0, 2023/02/28
