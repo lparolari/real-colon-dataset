@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "downloader"
+version = "0.1.0"
+description = ""
+authors = ["lparolari <luca.parolari23@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+pydantic = "^2.5.3"
+requests = "^2.31.0"
+tqdm = "^4.66.1"
+
+[tool.poetry.dev-dependencies]
+black = "^23.12.1"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+downloader = "downloader.main:main"
