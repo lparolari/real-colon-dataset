@@ -89,7 +89,10 @@ def print_help_filter():
     )
 
 
-def ask_confirmation():
+def ask_confirmation(skip=False):
+    if skip:
+        return
+
     print("Do you want to continue with the download? [Y/n]", end=" ")
     answer = input() or "Y"
 
@@ -122,6 +125,12 @@ def main():
         help="Show more information (e.g. file list)",
         action="store_true",
     )
+    parser.add_argument(
+        "-y",
+        "--yes",
+        help="Do not ask for confirmation",
+        action="store_true",
+    )
 
     article_id = "22202866"  # article id for realcolon dataset
 
@@ -143,7 +152,7 @@ def main():
 
     print(f"Found {n_files} files (total size {mb(tot_size):.2f} MB)")
 
-    ask_confirmation()
+    ask_confirmation(skip=args.yes)
 
     download_files(files, args.output_dir)
 
